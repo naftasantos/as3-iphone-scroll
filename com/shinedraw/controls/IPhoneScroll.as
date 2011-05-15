@@ -105,7 +105,7 @@ package com.shinedraw.controls {
 					var bouncing:Number = 0;
 					
 					// calculate a bouncing when the text moves over the canvas size
-					if (y > 0)
+					if (y > 0 || textHeight <= _canvasHeight) // textHeight <= _canvasHeight => when the item is smaller than the stage.height, align to the top
 					{
 						bouncing = -y * BOUNCING_SPRINGESS;
 					}else if( y + textHeight < _canvasHeight){
